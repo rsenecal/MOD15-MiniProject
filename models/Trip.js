@@ -54,6 +54,7 @@ Trips.init(
       references: {
         model: "location",
         key: "id",
+        unique: false,
       },
     },
   },
@@ -63,6 +64,7 @@ Trips.init(
     freezeTableName: true,
     underscored: true,
     modelName: "trip",
+    unique: false,
   }
 );
 
