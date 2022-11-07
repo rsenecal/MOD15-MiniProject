@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
-const { Location, Traveller, Trips } = require('../../models');
+const { Location, Traveller, Trip } = require('../../models');
 
 // GET all travellers
 router.get('/', async (req, res) => {
@@ -20,7 +20,7 @@ router.get('/:id', async (req, res) => {
   try {
     // find a single traveller by its `id`
     const travellerData = await Traveller.findByPk(req.params.id, {
-      include: [{ model: Location }, { model: Trips }],
+      include: [{ model: Location, through: Trip, as: 'plannedTrip' }],
     });
     res.status(200).json(travellerData);
   } catch (err) {
