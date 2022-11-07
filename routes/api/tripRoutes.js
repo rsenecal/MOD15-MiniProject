@@ -2,16 +2,10 @@ const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { Location, Traveller, Trips } = require('../../models');
 
-// GET all locations
-router.get('/', async (req, res) => {});
-
-// GET a single location
-router.get('/:id', async (req, res) => {});
-
-// Create a new location
+// Create a new trip
 router.post('/', (req, res) => {});
 
-// DELETE a location by ID
+// DELETE a trip by ID
 router.delete('/:id', async (req, res) => {});
 
 module.exports = router;

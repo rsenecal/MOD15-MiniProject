@@ -13,4 +13,5 @@ router.post('/', (req, res) => {});
 
 // DELETE a traveller by ID
 router.delete('/:id', async (req, res) => {});
+
 module.exports = router;
