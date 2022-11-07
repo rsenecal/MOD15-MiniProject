@@ -4,7 +4,7 @@ const sequelize = require("../config/connection.js");
 
 class Traveller extends Model {}
 
-Category.init(
+Traveller.init(
   {
     // define columns
     id: {

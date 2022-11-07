@@ -4,7 +4,7 @@ const sequelize = require("../config/connection.js");
 
 class Location extends Model {}
 
-Category.init(
+Location.init(
   {
     // define columns
     id: {

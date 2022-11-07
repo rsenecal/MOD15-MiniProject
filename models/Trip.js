@@ -7,7 +7,7 @@ const sequelize = require("../config/connection");
 class Trips extends Model {}
 
 // set up fields and rules for Product model
-Product.init(
+Trips.init(
   {
     // define columns
     id: {
@@ -62,8 +62,8 @@ Product.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "trips",
+    modelName: "trip",
   }
 );
 
-module.exports = Product;
+module.exports = Trips;
